@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import { useChat } from "ai/react";
 import { getApiUrl } from "@lib/api.ts";
 import { constants } from "@lib/constants.ts";
+import Image from "next/image";
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
@@ -29,11 +30,12 @@ export default function Chat() {
                 {m?.experimental_attachments
                   ?.filter((attachment) => attachment?.contentType?.startsWith("image/"))
                   .map((attachment, index) => (
-                    <img
+                    <Image
                       key={`${m.id}-${index}`}
                       src={attachment.url}
                       width={500}
-                      alt={attachment.name}
+                      height={300}
+                      alt={attachment.name ?? "image"}
                       className="mt-2"
                     />
                   ))}
