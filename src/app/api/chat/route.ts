@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     });
     // console.log("api -> chat -> route -> POST -> response.body", result);
 
-    return result.toTextStreamResponse();
+    return result.toDataStreamResponse();
   } catch (error) {
     console.error("Error in POST handler:", error);
     return NextResponse.json(
