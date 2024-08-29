@@ -6,7 +6,7 @@ import "@assets/styles/globals.css";
 import CX_Logo_Light from "@images/logos/cx-logo-light.svg";
 import Linkedin_Icon from "@images/icons/Linkedin_Icon";
 
-export default function Header() {
+export function Header() {
   return (
     <>
       <header className="px-60">

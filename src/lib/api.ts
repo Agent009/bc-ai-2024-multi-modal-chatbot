@@ -6,8 +6,7 @@ import { constants } from "@lib/index";
  * @param {null|undefined|{[]}} params
  * @returns {string}
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const getApiUrl = (endpoint: string, params?: { [key: string]: any }): string => {
+export const getApiUrl = (endpoint: string, params?: { [key: string]: never }): string => {
   let apiUrl = constants.routes.api.base;
   apiUrl += (apiUrl?.charAt(apiUrl?.length - 1) !== "/" && endpoint?.charAt(0) !== "/" ? "/" : "") + endpoint;
   // console.log(apiUrl);

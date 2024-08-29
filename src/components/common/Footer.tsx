@@ -5,7 +5,7 @@ import CX_Logo_Dark from "@images/logos/cx-logo-dark.svg";
 import Arrow from "@images/icons/Arrow";
 import Linkedin_Icon_Orange from "@images/icons/Linkedin_Icon_Orange";
 
-export default function Footer() {
+export function Footer() {
   const [isArrowHovered, setIsArrowHovered] = useState<boolean>(false);
 
   const scrollToTop = () => {
