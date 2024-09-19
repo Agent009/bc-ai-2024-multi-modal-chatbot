@@ -1,6 +1,6 @@
-import { openai } from "@ai-sdk/openai";
-import { convertToCoreMessages, streamText } from "ai";
 import { NextResponse } from "next/server";
+import { convertToCoreMessages, streamText } from "ai";
+import { openai } from "@ai-sdk/openai";
 import { constants } from "@lib/index";
 
 // Allow streaming responses up to 30 seconds

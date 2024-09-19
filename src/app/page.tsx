@@ -1,9 +1,8 @@
 "use client";
 import { useState, useRef } from "react";
-import { useChat } from "ai/react";
-import { getApiUrl } from "@lib/api.ts";
-import { constants } from "@lib/constants.ts";
 import Image from "next/image";
+import { useChat } from "ai/react";
+import { constants, getApiUrl } from "@lib/index";
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
